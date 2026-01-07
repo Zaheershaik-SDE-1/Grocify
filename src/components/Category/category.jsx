@@ -13,8 +13,8 @@ const Category = () => {
           <img src={card.image} className="abosolute-bottom-0" />
         </div>
         <div className="bg-zinc-100 pt-17 p-8 rounded-xl">
-          <h3 className="text-zinc-800 text-3xl font-bold">{card.title}</h3>
-          <p className="text-zinc-600 mt-3 mb-9">{card.description}</p>
+          <h3 className="text-zinc-900 text-3xl font-bold">{card.title}</h3>
+          <p className="text-zinc-700 mt-3 mb-9">{card.description}</p>
           <Button content="See All" />
         </div>
       </div>
@@ -53,7 +53,7 @@ const category = [
 
   {
     id: 3,
-    title: "Meat & SeaFood",
+    title: "Meat & Fishes",
     description: "Fresh meat and seafoods.",
     image: SeafoodCat,
   },
