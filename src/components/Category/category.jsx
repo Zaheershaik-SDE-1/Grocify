@@ -8,14 +8,21 @@ import Button from "../Button/Button.jsx";
 const Category = () => {
   const renderCards = category.map((card) => {
     return (
-      <div className="flex-1 basis-[300px]">
-        <div className="w-full min-h-[30vh] relative -mb-15">
-          <img src={card.image} className="abosolute-bottom-0" />
-        </div>
-        <div className="bg-zinc-100 pt-17 p-8 rounded-xl">
-          <h3 className="text-zinc-900 text-3xl font-bold">{card.title}</h3>
-          <p className="text-zinc-700 mt-3 mb-9">{card.description}</p>
-          <Button content="See All" />
+      <div key={card.id} className="flex-1 basis-[300px] flex">
+        <div className="flex flex-col w-full">
+          <div className="w-full min-h-[30vh] relative -mb-15 flex items-end justify-center">
+            <img src={card.image} alt={card.title} />
+          </div>
+
+          <div className="bg-zinc-100 pt-17 p-8 rounded-xl flex flex-col flex-1">
+            <h3 className="text-zinc-900 text-3xl font-bold">{card.title}</h3>
+
+            <p className="text-zinc-700 mt-3 min-h-[3em]">{card.description}</p>
+
+            <div className="mt-auto">
+              <Button content="See All" />
+            </div>
+          </div>
         </div>
       </div>
     );
